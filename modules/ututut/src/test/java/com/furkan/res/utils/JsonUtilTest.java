@@ -13,4 +13,13 @@ class JsonUtilTest {
 
         assertEquals("res1",listRestorant.getRestorantList().get(0).getRestorantId());
     }
+
+    @Test
+    void fromResourceRestorantMenu() {
+        RestorantMenuResponse listRestorant = JsonUtil.fromResource("/restorantMenu.json", RestorantMenuResponse.class);
+        System.out.println(listRestorant.getValueList().get(0).getRestorantMenuId());
+
+        listRestorant.getValueList().forEach(System.out::println);
+        assertEquals("resMen1",listRestorant.getValueList().get(0).getRestorantMenuId());
+    }
 }

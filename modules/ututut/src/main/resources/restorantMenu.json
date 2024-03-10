@@ -1,0 +1,18 @@
+{
+  "content": [
+    {
+      "restorantMenuId": "resMen1",
+      "restorantId": "res1",
+      "menuList": [
+        {
+          "menuId": "menu1"
+        }
+      ]
+    },
+    {
+      "restorantMenuId": "resMen2",
+      "restorantId": "res2",
+      "menuList": []
+    }
+  ]
+}

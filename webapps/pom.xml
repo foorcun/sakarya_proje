@@ -27,9 +27,15 @@
         </dependency>
         <dependency>
             <groupId>com.furkan.restorant</groupId>
-            <artifactId>repository</artifactId>
+            <artifactId>domain</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.furkan.restorant</groupId>
+            <artifactId>service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
 

@@ -1,7 +1,8 @@
 package com.furkan.controller;
 
-import com.furkan.dao.restorant.RestorantRepository;
+import com.furkan.business.restorant.RestorantManager;
 import com.furkan.res.coreservices.domain.entity.Restorant;
+import com.furkan.res.coreservices.domain.entity.RestorantMenu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +13,7 @@ import java.util.List;
 public class RestorantController {
 
     @Autowired
-    RestorantRepository restorantRepository;
+    RestorantManager restorantManager;
 
     @GetMapping("/api/test")
     public String doTest(){
@@ -21,6 +22,11 @@ public class RestorantController {
 
     @GetMapping("/api/test/restorantlar")
     public List<Restorant> getAllRestorantlarTest(){
-        return restorantRepository.findAll();
+        return restorantManager.findAll();
+    }
+
+    @GetMapping("/api/getAllRestorantMenu")
+    public List<RestorantMenu> getAllRestorantMenu(){
+        return restorantManager.findAllRestorantMenu();
     }
 }
